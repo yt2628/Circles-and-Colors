@@ -6,7 +6,7 @@ let initialAngle = circleAngle - 90;
 let a = 0;
 let b = 0;
 let timeAngle = 0;
-
+let bgcolor = 220;
 
 function setup() {
   createCanvas(500, 500);
@@ -15,7 +15,8 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(bgcolor);
+  bgcolor = map(mouseX, 0, 500, 200, 255);
   noStroke();
 
   for (let i=0; i < numberCircle; i++) {
