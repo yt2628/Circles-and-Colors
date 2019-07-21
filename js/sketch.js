@@ -1,6 +1,6 @@
 let data = [];
 
-let numberCircle = 3;
+let numberCircle = 5;
 let circleAngle = 360/numberCircle;
 let initialAngle = circleAngle - 90;
 let a = 0;
