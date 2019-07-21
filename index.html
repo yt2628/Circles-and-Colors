@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Circles and Colors</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- p5js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Click circles!</h1>
+        <div class="btnGroup">
+          <form>
+            <button type="button" onclick="addCircle()" class="btn btn-primary">More Circles</button>
+            <button type="button" onclick="removeCircle()" class="btn btn-primary">Less Circles</button>
+          </form>
+        </div>
+      <p>You now have <span id="pNumber" value=3>3</span> colors to combine!</p>
+    </div>
+
+
+
+    <script src="js/sketch.js"></script>
+  </body>
+</html>
