@@ -3,6 +3,10 @@ let data = [];
 let numberCircle = 4;
 let circleAngle = 360/numberCircle;
 let initialAngle = circleAngle - 90;
+let a = 0;
+let b = 0;
+let timeAngle = 0;
+
 
 function setup() {
   createCanvas(500, 500);
@@ -27,9 +31,12 @@ function draw() {
     data.push(newCircle);
     fill(data[i].r, data[i].g, data[i].b, 100);
     ellipse(data[i].x, data[i].y, 200, 200);
-
   }
+
+  rotatingCircle();
 }
+
+
 
 function mousePressed() {
   for (let i=0; i < data.length; i++) {
@@ -43,9 +50,25 @@ function mousePressed() {
   }
 }
 
+function rotatingCircle() {
+  let c1 = color(data[0].r, data[0].g, data[0].b);
+  let c2 = color(data[1].r, data[1].g, data[1].b);
+  let c3 = color(data[2].r, data[2].g, data[2].b);
+  let cc = lerpColor(c1, c2, 0.5);
+  let ccc = lerpColor(c3, cc, 0.5);
+  push();
+  translate(300, 60);
+  fill(ccc);
+  ellipse(a, b, 60, 60);
+  a+= sin(timeAngle);
+  b+= cos(timeAngle);
+  timeAngle-=1;
+  pop();
+}
+
 function addCircle() {
   numberCircle+=1;
-  alert(numberCircle);
+  // alert(numberCircle);
   // setup();
   // draw();
 }
